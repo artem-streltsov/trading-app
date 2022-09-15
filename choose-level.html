@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Choose level</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div id="choose-level">
+      <h1>Choose a level</h1>
+      <div id="levels"></div>
+    </div>
+  </body>
+
+  <script type="module">
+    import { levels } from './modules/level.js'
+
+    (function() {
+      let levels_html = ``
+
+      for (let i = 0; i < levels.length; i++) {
+        let name = levels[i].name
+        let id = levels[i].id
+        let initial_capital = levels[i].initial_capital
+        let required_profit = levels[i].required_profit
+        let difficulty = levels[i].difficulty
+
+        let level_html = `
+          <a class="level ${difficulty}" id="${id}">
+            <h2>${name} (${id})</h2>
+            <h3>Initial capital: $${initial_capital}</h3>
+            <h3>Required profit: $${required_profit}</h3>
+            <h3>Difficulty: ${difficulty}</h3>
+          </a>`
+
+        levels_html = levels_html + level_html
+      }
+
+      document.getElementById('levels').innerHTML = levels_html
+    })()
+
+    let links = document.getElementsByTagName('a')
+
+    for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', () => { window.open(`trade-stock.html?stock_id=${links[i].id}`, '_self') })
+    }
+  </script>
+
+</html>

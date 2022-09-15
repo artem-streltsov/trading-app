@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  color: #000;
+}
+
+h2 {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+}
+
+h3 {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+}
+
+button {
+  margin-top: 7px;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* INDEX */
+#index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#index button {
+  margin-top: 25px;
+  padding: 10px 15px;
+  font-size: 20px;
+  background-color: rgb(80, 202, 80);
+}
+
+/* CHOOSE-LEVEL */
+#choose-level {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#levels {
+  display: flex;
+}
+
+.level {
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.level h2 {
+  margin-bottom: 15px;
+}
+
+.level:hover {
+  cursor: pointer;
+}
+
+.easy {
+  background-color: rgb(80, 202, 80);
+}
+
+.medium {
+  background-color: orange;
+}
+
+/* TRADE-STOCK */
+#stock-id {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#trade-stock {
+  display: flex;
+}
+
+#charts {
+  width: calc(100% - 350px);
+  max-width: 1000px;
+}
+
+#information {
+  padding: 5px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: rgb(239, 239, 239);
+}
+
+#information > div {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#pattern-recognition-checkbox {
+  margin-right: 5px;
+  width: fit-content;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <h1>Results</h1>
+
+    <h2>Overall profit:</h2>
+    <h3 id="results-profit"></h3>
+
+    <h2>Required profit:</h2>
+    <h3 id="results-required-profit"></h3>
+
+    <h2>Level passed:</h2>
+    <h3 id="results-level-passed"></h3>
+
+    <button onclick="window.open('index.html')">Play again</button>
+  </body>
+
+  <script type="text/javascript">
+    (function() {
+      let queryString = window.location.search
+      let urlParams = new URLSearchParams(queryString)
+
+      let profit = urlParams.get('profit')
+      let required_profit = urlParams.get('required_profit')
+      let isPassed = urlParams.get('isPassed')
+
+      document.getElementById('results-profit').textContent = profit
+      document.getElementById('results-required-profit').textContent = required_profit
+      document.getElementById('results-level-passed').textContent = isPassed
+    })()
+  </script>
+
+</html>

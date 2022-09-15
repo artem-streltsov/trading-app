@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Trade stock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div id="trade-stock">
+      <div id="charts">
+        <div id="candlestick-chart"></div>
+        <div id="moving-average-chart"></div>
+      </div>
+
+      <div id="information">
+        <h1 id="stock-id"></h1>
+        <div>
+          <h2>Wallet</h2>
+          <h3 id="money-available"></h3>
+          <h3 id="owned-stocks"></h3>
+        </div>
+
+        <div>
+          <h2>Level</h2>
+          <h3 id="required-profit"></h3>
+          <h3 id="profit"></h3>
+        </div>
+
+        <div>
+          <h2>Buy / Sell</h2>
+          <div class="input-container">
+            <label for="number-of-stocks">Number of stocks</label>
+            <input type="number" id="number-of-stocks" required>
+          </div>
+          <button id="buy-btn">BUY</button>
+          <button id="sell-btn">SELL</button>
+          <p id="error-message"></p>
+        </div>
+
+        <div>
+          <h2>Settings</h2>
+          <div class="input-container">
+            <label for="short-term-input">Short-term input</label>
+            <input type="number" id="short-term-input" value="5">
+          </div>
+          <div class="input-container">
+            <label for="long-term-input">Long-term input</label>
+            <input type="number" id="long-term-input" value="15">
+          </div>
+          <select id="options">
+            <option value="sma">Simple Moving Average</option>
+            <option value="wma">Weighted Moving Average</option>
+          </select>
+          <button id="change-settings-btn">APPLY</button>
+        </div>
+
+        <div>
+          <h2>Pattern Recognition</h2>
+          <div class="checkbox-container">
+            <input type="checkbox" id="pattern-recognition-checkbox" checked>
+            <label for="pattern-recognition-checkbox">show</label>
+          </div>
+        </div>
+
+        <div>
+          <button id="stop-simulation-btn">Stop simulation</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <script src="app.js" type="module"></script>
+
+</html>
